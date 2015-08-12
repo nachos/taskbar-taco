@@ -1,0 +1,9 @@
+node_modules
+client/bower_components
+.idea
+client/.tmp
+build
+nachos-home/dips/**/**/bower_components/**/*
+**/bower_components/
+**/node_modules/
+**/.tmp/*

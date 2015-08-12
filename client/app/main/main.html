@@ -1,0 +1,50 @@
+<div ng-controller="Main"
+     class="taskbar md-whiteframe-z1" layout="row">
+  <div class="programs" flex layout="row">
+    <md-button ng-repeat="window in windows" ng-click="windowClick(window)">
+      <span>{{ window.title }}</span>
+      <i class="mdi {{ getNumberOfWindowsClass(window) }}"></i>
+    </md-button>
+  </div>
+  <div class="workspaces" layout="row">
+    <md-button ng-repeat="(id, workspace) in workspaces" ng-click="changeWorkspace(id)"> {{ workspace }} </md-button>
+  </div>
+  <div class="toolbar" layout="row">
+    <md-button class="md-icon-button">
+      {{batteryLevel}} bat
+    </md-button>
+    <md-button class="md-icon-button" ng-click="setBrightness()">
+      <md-tooltip>
+        {{brightness * 100}}%
+      </md-tooltip>
+      <i class="mdi mdi-brightness-5"></i>
+    </md-button>
+    <md-button class="md-icon-button" ng-click="setVolume()">
+      <md-tooltip>
+        {{volume * 100}}%
+      </md-tooltip>
+      <i ng-show="volume >= 0.75" class="mdi mdi-volume-high"></i>
+      <i ng-show="volume < 0.75 && volume >= 0.5" class="mdi mdi-volume-medium"></i>
+      <i ng-show="volume < 0.5 && volume >= 0.25" class="mdi mdi-volume-low"></i>
+      <i ng-show="volume == 0" class="mdi mdi-volume-off"></i>
+    </md-button>
+    <md-button class="md-icon-button" ng-click="grid.toggleEditMode()">
+      <i ng-hide="grid.editMode" class="mdi mdi-layers"></i>
+      <i ng-show="grid.editMode" class="mdi mdi-layers-off"></i>
+    </md-button>
+    <div class="clock" layout="column" flex layout-align="space-around center">
+      <div>
+        <span>{{ date | amDateFormat:'h:mm A' }}</span>
+      </div>
+      <div>
+        <span>{{ date | amDateFormat:'DD/MM/YYYY' }}</span>
+      </div>
+    </div>
+    <div layout="column" layout-align="center center" class="user-image">
+      <div class="wrapper">
+        <img ng-if="user" ng-src="data:image/jpeg;base64,{{user.picture}}"/>
+      </div>
+      <i ng-if="!user" class="mdi mdi-account-circle"></i>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+{
+  "name": "taskbar-dip",
+  "version": "0.0.0",
+  "description": "The main nachos taskbar",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "layout": "git",
+    "url": "https://github.com/nachos/taskbar-dip"
+  },
+  "keywords": [
+    "nachos",
+    "desktop",
+    "shell",
+    "taskbar",
+    "dip"
+  ],
+  "author": "Nachos team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nachos/taskbar-dip/issues"
+  },
+  "homepage": "https://github.com/nachos/taskbar-dip",
+  "devDependencies": {},
+  "dependencies": {
+    "windowz": "nachos/windowz"
+  },
+  "engines": {
+    "electron": "0.30.1"
+  },
+  "private": true
+}

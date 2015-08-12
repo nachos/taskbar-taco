@@ -1,0 +1,27 @@
+.taskbar {
+  height: 56px;
+  background-color: #262626;
+  width: 100%;
+  color: white;
+  -webkit-user-select: none;
+}
+.taskbar .md-button {
+  min-width: 48px;
+  border-radius: 0;
+}
+.taskbar .toolbar {
+  padding: 0 8px;
+}
+.taskbar .toolbar > * {
+  padding: 0 4px;
+}
+.taskbar .user-image .wrapper {
+  border-radius: 30px;
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+}
+.taskbar .user-image .wrapper img {
+  height: 100%;
+  width: 100%;
+}

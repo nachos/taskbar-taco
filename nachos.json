@@ -1,0 +1,7 @@
+{
+  "name": "taskbar-dip",
+  "version": "0.0.0",
+  "type": "dip",
+  "main": "client/index.html",
+  "layout": "widget"
+}
