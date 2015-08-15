@@ -3,5 +3,5 @@
   "version": "0.0.0",
   "type": "dip",
   "main": "client/index.html",
-  "layout": "widget"
+  "layout": "dock"
 }

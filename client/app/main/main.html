@@ -28,9 +28,9 @@
       <i ng-show="volume < 0.5 && volume >= 0.25" class="mdi mdi-volume-low"></i>
       <i ng-show="volume == 0" class="mdi mdi-volume-off"></i>
     </md-button>
-    <md-button class="md-icon-button" ng-click="grid.toggleEditMode()">
-      <i ng-hide="grid.editMode" class="mdi mdi-layers"></i>
-      <i ng-show="grid.editMode" class="mdi mdi-layers-off"></i>
+    <md-button class="md-icon-button" ng-click="toggleEditMode()">
+      <i ng-hide="isEditMode" class="mdi mdi-layers"></i>
+      <i ng-show="isEditMode" class="mdi mdi-layers-off"></i>
     </md-button>
     <div class="clock" layout="column" flex layout-align="space-around center">
       <div>
