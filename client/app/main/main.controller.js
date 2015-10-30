@@ -7,7 +7,7 @@ angular.module('taskbarApp')
     var Q = require('q');
     var nachosApi = require('nachos-api');
     var client = nachosApi.server;
-    //var remote = require('remote');
+    var remote = require('remote');
     var windowz = remote.require('windowz');
 
     //var batteryLevel = require('battery-level');
@@ -18,10 +18,10 @@ angular.module('taskbarApp')
     $interval(function () {
       $scope.date = Date.now();
     }, 1000);
-
-    //$scope.windows = _.groupBy(windows.getAll(), function (window) {
-    //  //return window.process.name;
-    //});
+/*
+    $scope.windows = _.groupBy(windows.getAll(), function (window) {
+      return window.process.name;
+    });*/
 
     $scope.windows = windowz.getAll();
 /*
